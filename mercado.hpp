@@ -5,10 +5,9 @@
 using namespace std;
 
 struct lista{
-
-        int chave;
+	int chave;
 	char nome[NOME];
-        struct lista* prox;
+	struct lista* prox;
 };
 
 typedef struct lista Lista;
@@ -22,6 +21,8 @@ Lista* busca (Lista* l, int chave);
 int contador(Lista* l);
 Lista* imprime_busca (Lista* l);
 
+
+// FIXME: Melhorar implementação de busca com a do guilherme.
 Lista* imprime_busca (Lista* l){
 
 	Lista* p = l;
@@ -33,21 +34,21 @@ Lista* imprime_busca (Lista* l){
 int contador(Lista* l){
 	Lista* p;
 	int i = 0;
-	for(p=l;p!=NULL; p=p->prox)
+	for(p=l;p!=nullptr; p=p->prox)
 		i = i+1;
 }
 
 Lista* busca (Lista* l, int chave){
 	Lista* p;
-	for (p=l; p!=NULL; p=p->prox)
+	for (p=l; p!=nullptr; p=p->prox)
 		if(p->chave == chave)
 			return p;
-	return NULL;
+	return nullptr;
 }
 
 void libera(Lista *l){
 	Lista* p = l;
-	while (p != NULL){
+	while (p != nullptr){
 		Lista* t = p->prox;
 		free(p);
 		p = t;
@@ -55,11 +56,11 @@ void libera(Lista *l){
 }
 
 int vazia (Lista* l){
-	return (l == NULL);
+	return (l == nullptr);
 }
 
 Lista* inicializa (){
-        return NULL;
+        return nullptr;
 }
 
 Lista* insere (Lista* l, int chave, char nome[NOME]){
@@ -71,7 +72,7 @@ Lista* insere (Lista* l, int chave, char nome[NOME]){
 }
 void imprime (Lista* l){
         Lista* p;
-                for(p=l;p != NULL; p = p->prox){
+                for(p=l;p != nullptr; p = p->prox){
                 cout << "info = " << p->chave << endl;
 		cout << p->nome << endl<<endl;
 
