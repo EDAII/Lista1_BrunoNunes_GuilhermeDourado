@@ -66,14 +66,7 @@ int buscaInterpolacao( int *produto, int tamanho, int chave){
         resultado = ((chave*1.0 - produto[i])/(produto[f] - produto[i]));
 
         resultado = (resultado * (f -  i))  + i;
-
-        cout << resultado << endl;
-
         meio = resultado;
-
-        cout << ((chave - produto[i])/(produto[f] - produto[i])) << endl;
-        cout << meio << endl;
-
         if (produto[meio]==chave){
             cout << "Se passaram " << interacao << " lacos" << endl << "A posicao é ";
             return meio;}
