@@ -13,6 +13,7 @@ int main(){
 
     cout << "Antes de ultilizar o programa, leia o README." << endl;
 
+	usleep(5000000);
 
     system("clear");
 
