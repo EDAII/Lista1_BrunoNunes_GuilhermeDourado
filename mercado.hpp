@@ -20,7 +20,8 @@ void libera(Lista *l);
 Lista* busca (Lista* l, int chave);
 int contador(Lista* l);
 Lista* imprime_busca (Lista* l);
-
+int busca_vetor (int id, int *produto);
+int arrayBinSearch(int *arr, int searchValue, int size);
 
 // FIXME: Melhorar implementação de busca com a do guilherme.
 Lista* imprime_busca (Lista* l){
@@ -71,10 +72,45 @@ Lista* insere (Lista* l, int chave, char nome[NOME]){
         return novo;
 }
 void imprime (Lista* l){
-        Lista* p;
+        Lista * p;
                 for(p=l;p != nullptr; p = p->prox){
                 cout << "info = " << p->chave << endl;
 		cout << p->nome << endl<<endl;
 
 		}	
+}
+
+int busca_vetor (int id, int *produto){
+
+    int i;
+
+    *(produto+30) = id;
+
+    for (i = 0; *(produto+i) != id ; i++ );
+
+        if (i < 22) {
+
+            cout << "Se passaram " << i << " interações" << endl;
+            return i;
+        }
+        else return (-1);
+
+
+
+}
+
+int arrayBinSearch(int *arr, int searchValue, int size){
+
+    int i = 0;
+    int j = 0;
+
+    if(arr[size/2] == searchValue){
+        return size/2;
+    } else if(arr[size/2] < searchValue){
+        for(i = size/2; searchValue == arr[i]; i--);
+        return i;
+    } else {
+        for(int j = size/2; searchValue == arr[i]; j++);
+        return j;
+    }
 }
