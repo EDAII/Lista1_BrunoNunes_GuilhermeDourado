@@ -1,8 +1,6 @@
 #include <iostream>
 #include <mhash.h>
-#include "mercado.hpp"
-
-
+#include "busca.hpp"
 
 int main(){
 
