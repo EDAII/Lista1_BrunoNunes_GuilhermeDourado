@@ -39,7 +39,7 @@ int main(){
 
             cout << busca_vetor( id , produto, NOME) << endl;
 
-            usleep(2000000);
+            usleep(5000000);
 
             system("clear");
 
@@ -54,7 +54,7 @@ int main(){
 
                 cout << busca_vetor( id , outro, NOME) << endl;
 
-                usleep(2000000);
+                usleep(5000000);
 
                 system("clear");
 
@@ -67,7 +67,7 @@ int main(){
 
                 cout << buscaBinaria(produto, NOME , id) << endl;
 
-                usleep(2000000);
+                usleep(5000000);
 
                 system("clear");
             }
@@ -79,7 +79,7 @@ int main(){
 
             cout << buscaBinaria(outro, NOME , id) << endl;
 
-            usleep(2000000);
+            usleep(5000000);
 
             system("clear");
         }
@@ -91,7 +91,7 @@ int main(){
 
                 cout << buscaInterpolacao(outro, NOME, id) << endl;
 
-                usleep(2000000);
+                usleep(5000000);
 
                 system("clear");
 
