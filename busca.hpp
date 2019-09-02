@@ -22,7 +22,7 @@ int busca_vetor (int id, int *produto, int tamanho){
 
         if (i < tamanho-1) {
 
-            cout << "Se passaram " << i << " lacos" << endl << "A posicao é ";
+            cout << "Se passaram " << i << " lacos" << endl << "A posicao eh ";
             return i;
         }
         else return (-1);
@@ -41,7 +41,7 @@ int buscaBinaria(int *arranjo,int tamanho, int chave) {
         interacao++;
         meio = (i+f)/2;
         if (arranjo[meio]==chave){
-            cout << "Se passaram " << interacao << " lacos" << endl << "A posicao é ";
+            cout << "Se passaram " << interacao << " lacos" << endl << "A posicao eh ";
             return meio;}
         else {
             if (chave>arranjo[meio])
@@ -68,7 +68,7 @@ int buscaInterpolacao( int *produto, int tamanho, int chave){
         resultado = (resultado * (f -  i))  + i;
         meio = resultado;
         if (produto[meio]==chave){
-            cout << "Se passaram " << interacao << " lacos" << endl << "A posicao é ";
+            cout << "Se passaram " << interacao << " lacos" << endl << "A posicao eh ";
             return meio;}
         else {
             if (chave>produto[meio])
