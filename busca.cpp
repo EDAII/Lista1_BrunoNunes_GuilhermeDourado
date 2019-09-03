@@ -1,5 +1,5 @@
 #include <iostream>
-#include <mhash.h>
+
 #include "busca.hpp"
 
 int main(){

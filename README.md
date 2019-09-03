@@ -20,6 +20,9 @@ No display, aparecerá o numero de vezes que a função pecorreu o laços e a po
 
 ## Como rodar
 
+#Alerta Sistema Operacional:
+ - o código utiliza a biblioteca "mhash.h" esperando que o usuário que execute utilizando    o sistema slackware. Para compilar utilizando o Ubuntu é necessário trocar a              biblioteca acima pela "unistd.h" do arquivo "busca.cpp".
+
 O programa é compilado no sistema Linux, onde por commando tem:
     
      g++ busca.cpp -o bin
